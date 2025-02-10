@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+:root {
+	--col-bg: #16181c;
+	--col-button: #22252b;
+	--col-button-selected: #4f5664;
+	--col-button-hover: #383d47;
+	--col-hilite: #383d47;
+	--col-text: rgb(255 255 255 / 0.8);
+	--col-footer-text: white;
+	--opacity-footer: 0.15;
+	--z-main: 50;
+	--z-controls: 60;
+	--z-nav: 70;
+	font-family: "Rubik", Courier New, Helvetica, sans-serif;
+	font-size: 11pt;
+	color-scheme: dark;
+	background-color: var(--col-bg);
+	color: var(--col-text);
+	user-select: none;
+}
+p,button,label,h1,h2,h3,h4,h5,h6 {
+	color: var(--col-text);
+}
+body {
+	height: 100%;
+	margin: 0;
+	overflow: hidden;
+}
+button {
+	border: none;
+	outline-color: rgb(255 255 255 / .1);
+	font-family: inherit;
+	font-size: inherit;
+}
+footer {
+	text-align: center;
+	opacity: var(--opacity-footer);
+	color: var(--col-footer-text);
+	:is(p, a) {
+		color: var(--col-footer-text);
+	}
+}
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: grid;
+}
+#app {
+	height: 100dvh;
+	display: flex;
+	flex-direction: column;
+}
+
+@media only screen and (min-width: 1024px) {
+	:root {
+		font-size: 14pt;
+	}
+	#app {
+		flex-direction: row;
+		height: unset;
+	}
+}
